@@ -105,25 +105,38 @@ img {
     background-color: #181818;
     float: right;
     height: 400px;
-    margin-right: 50px;
-    border-radius: 10px;
+    margin-right: 65px;
+    border: 5px solid white;
+
 }
 
 .leftblock {
     margin-top: 200px;
-    margin-left: 50px;
     width:40%;
-    height: 400px;
+    background-color: #181818;
     float: left;
-    background-color: #ffffff;
-    border-radius: 10px;
-    opacity: 50%;
+    height: 400px;
+    margin-left: 65px;
+    border: 5px solid white;
+
 }
 
-.qrimg  {
-    object-fit: cover;
-    width: 100%;
-    height: 400px;
+.qrWall  {
     padding-top: 16%;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
 }
+
+.qrWall img {
+    object-fit: cover;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    height: 400px;
+}
+
+.qrWall hr {
+    border: 5px solid white;
+    margin: 0;
+    padding: 0;
+}
+
