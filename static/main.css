@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background: linear-gradient(180deg, black 60%, white 60%);
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
@@ -139,4 +139,11 @@ img {
     margin: 0;
     padding: 0;
 }
+
+.qrWall .qrWall2 hr {
+    border: 6px solid black;
+    margin: 0;
+    padding-top: 0;
+}
+
 
