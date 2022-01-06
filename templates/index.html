@@ -28,9 +28,18 @@
     </div>
 
     <!--Triangle suggesting to scroll down-->
-    <div class="scrolldown">
+    <div class="scrolldown2">
         <img src="../static/down.png" alt="down" width="50px">
     </div>
+
+    <div class='scrolldown'>
+  <div class="chevrons">
+    <div class='chevrondown'></div>
+    <div class='chevrondown'></div>
+  </div>
+</div>
+
+
 
     <!--Image or QR codes including hr rulers-->
     <div class="qrWall">
@@ -42,18 +51,21 @@
     </div>
 
     <!--Information block "About" QR codes inc. button-->
-    <div class="leftblock">
-        <div class="leftbutton">
-            <button>Click me!</button>
-        </div>
+    <div class="mainBlock">
+        <h3>Een QR-Code is geen simpel plaatje, er zit behoorlijk wat diepte in een QR-Code. Doormiddel van deze website probeer ik jullie wat te leren over QR-Codes. Ook heb je de mogelijkheid om zelf QR-Codes te generenen. QR-Codes die je in het wild vind kan je hier ook uploaden als foto!</h3>
     </div>
 
-    <!--Information block "Generate" QR codes inc. button-->
-    <div class="rightblock">
-        <div class="rightbutton">
-            <button>Click me!</button>
-        </div>
+    <div class="buttonBlock">
+           <a href={{url_for('make')}}> <button id="button3">← make</button></a>
+           <a href={{url_for('learn')}}> <button id="button3">learn</button></a>
+           <a href={{url_for('upload')}}> <button id="button3">upload →</button></a>
+
     </div>
+
+<a href={{url_for('make')}}> link
+text</a>
+
+<footer contentEditable>Hier komt footer shit te staan</footer>
 
 </body>
 </html>

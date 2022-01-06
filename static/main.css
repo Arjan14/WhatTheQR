@@ -3,6 +3,13 @@ body {
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
 
@@ -88,36 +95,15 @@ img {
 
 .scrolldown img {
     padding-top: 100px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.isis  {
-    padding-top: 150px;
-    border-radius: 50%;
+        margin: 0px auto;
 
 }
 
-.rightblock {
-    margin-top: 200px;
-    width:40%;
-    background-color: #181818;
-    float: right;
-    height: 400px;
-    margin-right: 65px;
-    border: 5px solid white;
-
-}
-
-.leftblock {
-    margin-top: 200px;
-    width:40%;
-    background-color: #181818;
-    float: left;
-    height: 400px;
-    margin-left: 65px;
-    border: 5px solid white;
+.mainBlock {
+    padding-top: 80px;
+    width: 80%;
+    padding-bottom: 50px;
+    margin: 0px auto;
 
 }
 
@@ -145,5 +131,49 @@ img {
     margin: 0;
     padding-top: 0;
 }
+
+.mainBlock h3 {
+
+    font-size: 30px;
+    text-align: justify;
+    font-style: italic;
+
+}
+
+.buttonBlock    {
+    padding-top: 30px;
+    padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonBlock #button1,#button2,#button3 {
+    display:inline-block;
+    margin: 15px;
+    padding: 5px;
+}
+
+.buttonBlock #button1   {
+    background-color: red;
+}
+
+.buttonBlock #button2   {
+    background-color: red;
+}
+
+.buttonBlock #button3   {
+    background-color: red;
+}
+
+footer{
+  min-height:200px;
+  background: #181818;
+}
+
+
+
+
+
+
 
 
