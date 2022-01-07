@@ -1,0 +1,98 @@
+/*Styling of body*/
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    width: 100%;
+}
+
+/*Styling of image*/
+img {
+    padding-top: 7px;
+    padding-left: 10px;
+}
+
+/*Styling of unordered list*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 3px;
+    overflow: hidden;
+    background-color: #181818;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    float: left;
+}
+
+/*Styling of list item*/
+li {
+    float: left;
+    padding-left: 4px;
+}
+
+/*Styling of list item link*/
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/*Styling of block with text under qr wall*/
+.mainBlock {
+    padding-top: 100px;
+    width: 80%;
+    padding-bottom: 50px;
+    margin: 0px auto;
+}
+
+/*Styling of text in mainblock*/
+.mainBlock h3 {
+    font-size: 30px;
+    text-align: justify;
+    font-style: italic;
+}
+
+/*Styling of footer*/
+footer{
+    min-height:200px;
+    background: #181818;
+    display:inline-block;
+    width: 100%;
+    float: bottom;
+}
+
+/*Styling of footer img*/
+footer img {
+    padding-top: 3%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Styling of footer text*/
+footer h3 {
+    color: white;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+/*Styling of logotext*/
+.logotext {
+    margin: auto;
+    padding-top: 150px;
+}
+
+/*Styling of logo img*/
+.logotext img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
