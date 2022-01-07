@@ -1,18 +1,12 @@
+/*Styling of body*/
 body {
     background: linear-gradient(180deg, black 60%, white 60%);
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox */
-    overflow-y: scroll;
 }
 
-body::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
-}
-
-
+/*Styling of h1 text*/
 h1 {
     color: white;
     text-align: center;
@@ -22,18 +16,22 @@ h1 {
     font-weight: bold;
 }
 
+/*Styling of links*/
 a {
     color: white;
 }
 
+/*Styling of ruler*/
 hr {
     border: 1px solid white;
 }
 
+/*Styling of navbar on top*/
 .navbar {
     width: 100%;
 }
 
+/*Styling of unordered list*/
 ul {
     list-style-type: none;
     margin: 0;
@@ -46,11 +44,13 @@ ul {
     float: left;
 }
 
+/*Styling of list item*/
 li {
     float: left;
     padding-left: 4px;
 }
 
+/*Styling of list item link*/
 li a {
     display: block;
     color: white;
@@ -59,18 +59,19 @@ li a {
     font-weight: bolder;
 }
 
-
-
+/*Styling of image*/
 img {
     padding-top: 7px;
     padding-left: 10px;
 }
 
+/*Styling of logotext*/
 .logotext {
   margin: auto;
   padding-top: 150px;
 }
 
+/*Styling of logo img*/
 .logotext img {
     display: block;
   margin-left: auto;
@@ -78,6 +79,7 @@ img {
   width: 40%;
 }
 
+/*Styling of styling of quote*/
 .logotext h2 {
     color: white;
     text-align: center;
@@ -87,44 +89,51 @@ img {
 
 }
 
+/*Styling of ruler under logo*/
 .logotext hr {
     width: 42%;
     border-top: 3px solid white;
     margin-top: 20px;
 }
 
+/*Styling of scrolldown image*/
 .scrolldown img {
     padding-top: 200px;
     display: block;
     margin-left: auto;
     margin-right: auto;
--webkit-animation: mover 1s infinite  alternate;
+    -webkit-animation: mover 1s infinite  alternate;
     animation: mover 1s infinite  alternate;
     position: relative;
     z-index: -10;
 }
+
+/*Styling of scrolldown image*/
 @-webkit-keyframes mover {
     0% { transform: translateY(0); }
     100% { transform: translateY(-30px); }
 }
+
+/*Styling of scrolldown image*/
 @keyframes mover {
     0% { transform: translateY(0); }
     100% { transform: translateY(-30px); }
 }
 
+/*Styling of block with text under qr wall*/
 .mainBlock {
-    padding-top: 80px;
+    padding-top: 100px;
     width: 80%;
     padding-bottom: 50px;
     margin: 0px auto;
-
 }
 
+/*Styling of picture with qr codes*/
 .qrWall  {
     padding-top: 16%;
-
 }
 
+/*Styling of img of qr wall*/
 .qrWall img {
     object-fit: cover;
     margin: 0;
@@ -133,31 +142,36 @@ img {
     height: 400px;
 }
 
+/*Styling of ruler qr wall*/
 .qrWall hr {
     border: 5px solid white;
     margin: 0;
     padding: 0;
 }
 
+/*Styling of ruler qrwall*/
 .qrWall .qrWall2 hr {
     border: 6px solid black;
     margin: 0;
     padding-top: 0;
 }
 
+/*Styling of text in mainblock*/
 .mainBlock h3 {
     font-size: 30px;
     text-align: justify;
     font-style: italic;
 }
 
+/*Styling of button div*/
 .buttonBlock    {
     padding-top: 30px;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
     display: flex;
     justify-content: center;
 }
 
+/*Styling of buttons in buttondiv*/
 .buttonBlock #button1,#button2,#button3 {
     display:inline-block;
     margin: 10px;
@@ -174,6 +188,7 @@ img {
     border-radius: 15px;
 }
 
+/*Styling of buttons while hovering in buttonblock*/
 .buttonBlock #button1,#button2,#button3:hover {
     display:inline-block;
     margin: 10px;
@@ -190,10 +205,28 @@ img {
     border-radius: 15px;
 }
 
-
-
+/*Styling of footer*/
 footer{
-  min-height:200px;
-  background: #181818;
+    min-height:200px;
+    background: #181818;
+    display:inline-block;
+    width: 100%;
 }
+
+/*Styling of footer img*/
+footer img {
+    padding-top: 3%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Styling of footer text*/
+footer h3 {
+    color: white;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
 
