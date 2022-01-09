@@ -163,10 +163,17 @@ img {
     font-style: italic;
 }
 
+/*Styling of text in mainblock*/
+.mainBlock h2 {
+    padding-bottom: 2%;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
 /*Styling of button div*/
 .buttonBlock    {
     padding-top: 30px;
-    padding-bottom: 80px;
+    padding-bottom: 120px;
     display: flex;
     justify-content: center;
 }
