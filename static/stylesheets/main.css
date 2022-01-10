@@ -1,9 +1,10 @@
 /*Styling of body*/
 body {
-    background: linear-gradient(180deg, black 60%, white 60%);
+    background: linear-gradient(180deg, black 50%, white 50%);
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
+    min-width: 1000px;
 }
 
 /*Styling of h1 text*/
@@ -74,9 +75,10 @@ img {
 /*Styling of logo img*/
 .logotext img {
     display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+
 }
 
 /*Styling of styling of quote*/
@@ -140,6 +142,7 @@ img {
     width: 100%;
     padding: 0;
     height: 400px;
+    max-width: 100%;
 }
 
 /*Styling of ruler qr wall*/
@@ -154,6 +157,7 @@ img {
     border: 6px solid black;
     margin: 0;
     padding-top: 0;
+    max-width: 100%;
 }
 
 /*Styling of text in mainblock*/
@@ -168,6 +172,7 @@ img {
     padding-bottom: 2%;
     font-size: 40px;
     font-weight: bolder;
+    text-decoration: underline;
 }
 
 /*Styling of button div*/
@@ -218,6 +223,13 @@ footer{
     background: #181818;
     display:inline-block;
     width: 100%;
+}
+
+footer hr{
+    border:none;
+  border-top:3px dashed white;
+  height:3px;
+  width:100%;
 }
 
 /*Styling of footer img*/

@@ -34,5 +34,7 @@ def generate_qrcode():
     response = send_file(buffer, mimetype='image/png')
     return response
 
+
+
 if __name__ == '__main__':
     app.run()

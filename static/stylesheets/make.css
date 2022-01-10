@@ -3,6 +3,8 @@ body {
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
+    min-width: 1000px;
+    position: relative;
 }
 
 .navbar {
@@ -60,11 +62,18 @@ li a {
 
 /*Styling of footer*/
 footer{
-    min-height:200px;
+    min-height:180px;
     background: #181818;
     display:inline-block;
     width: 100%;
     float: bottom;
+}
+
+footer hr{
+    border:none;
+  border-top:3px dashed white;
+  height:1px;
+  width:100%;
 }
 
 /*Styling of footer img*/
@@ -95,4 +104,83 @@ footer h3 {
     margin-left: auto;
     margin-right: auto;
     width: 40%;
+    margin-bottom: -50px;
+}
+
+.inputtext  {
+    margin: auto;
+    width: 30%;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.inputtext label    {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.inputtext   input   {
+    width: 100%;
+    padding: 10px 10px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.inputtext input:focus  {
+}
+
+.inputtext h2   {
+    text-decoration: underline;
+}
+
+.output {
+    margin: auto;
+    min-height: 500px;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.output img {
+    margin: auto;
+    max-width: 100%;
+    width: 30%;
+
+}
+
+.left img    {
+    width: 300px;
+    float: left;
+    height: 600px;
+    padding-left: -100px;
+
+
+}
+
+.right img  {
+    width: 300px;
+    float: right;
+    height: 600px;
+}
+
+.right  {
+    margin-top: -40px;
+    float:right;
+    width:15%;
+}
+
+.left {
+        margin-top: -40px;
+    float: left;
+    width:15%;
+    padding-left: -100px;
+    left: 0;
+    margin-left: -15px;
+}
+
+
+.middle {
+    float:left;
+    width:70%;
 }
