@@ -29,6 +29,14 @@
 
     <!--Upload image-->
     <div class="upload">
+<form method="POST" action="" enctype="multipart/form-data">
+      <p><input type="file" name="file"></p>
+      <p><input type="submit" value="Submit"></p>
+    </form>
+
+    {% for file in files %}
+      <img class="uploadimg" src="{{ url_for('upload', filename=file) }}" style="width: 64px">
+    {% endfor %}
 
     </div>
 
