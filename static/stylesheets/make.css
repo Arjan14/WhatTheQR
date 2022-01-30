@@ -9,6 +9,7 @@ body {
 
 .navbar {
     width: 100%;
+    z-index: 10;
 }
 
 /*Styling of image*/
@@ -135,25 +136,65 @@ footer h3 {
     text-decoration: underline;
 }
 
-.output {
-    margin: auto;
-    min-height: 500px;
-    text-align: center;
-    padding-top: 60px;
+#qr-code {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 300px;
+    padding-bottom: 200px;
 }
 
-.output img {
-    margin: auto;
-    max-width: 100%;
-    width: 30%;
-
+.buttonBlock    {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
 }
+
+/*Styling of buttons in buttondiv*/
+.qr-btn {
+
+    display:inline-block;
+    margin: 10px;
+    font-family: lato,sans-serif;
+    font-weight: bolder;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: #404040;
+    display: inline-block;
+    padding: 10px 40px 10px 40px;
+    position: relative;
+    border: 3px solid #ffffff;
+    border-radius: 15px;
+}
+
+/*Styling of buttons while hovering in buttonblock*/
+ .qr-btn:hover {
+    display:inline-block;
+    margin: 10px;
+    font-family: lato,sans-serif;
+    font-weight: bolder;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+    padding: 10px 40px 10px 40px;
+    position: relative;
+    border: 3px solid #ffffff;
+    border-radius: 15px;
+}
+
 
 .left img    {
     width: 300px;
     float: left;
     height: 600px;
     padding-left: -100px;
+    padding-top: 100px;
 
 
 }
@@ -162,6 +203,7 @@ footer h3 {
     width: 300px;
     float: right;
     height: 600px;
+    padding-top: 100px;
 }
 
 .right  {
@@ -183,4 +225,9 @@ footer h3 {
 .middle {
     float:left;
     width:70%;
+}
+
+
+.imglol {
+    height: 300px;
 }

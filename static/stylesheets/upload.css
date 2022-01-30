@@ -64,7 +64,13 @@ footer{
     background: #181818;
     display:inline-block;
     width: 100%;
-    float: bottom;
+}
+
+footer hr{
+    border:none;
+  border-top:3px dashed white;
+  height:3px;
+  width:100%;
 }
 
 /*Styling of footer img*/

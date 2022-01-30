@@ -57,15 +57,35 @@
     </div>
 
     <div class="middle">
-        <!--Input box that will generate qr code-->
-        <div class="inputtext">
-            <h2>Genereer QR-Code</h2>
-            <input name="qrcode" type="text" onchange="generateQRCode(this.value)" maxlength="2331" placeholder="https://www.WhatTheQR.nl"/>
+        <div class="inputtext"><input id="qr-text" type="text" placeholder="www.WhatTheQR.nl"/></div>
+        <div class="buttonBlock">
+            <button class="qr-btn" onclick="generateQRCode()">Genereer QR code</button>
         </div>
-        <!--Output Qr code image from input-->
-        <div class="output">
-            <img id="qrcode"/>
-        </div>
+        <br/>
+
+        <canvas id="qr-code"></canvas>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+		<script>
+			var qr;
+			(function() {
+                    qr = new QRious({
+                    element: document.getElementById('qr-code'),
+                    size: 200,
+                    value: 'https://whattheqr.nl'
+                });
+            })();
+
+            function generateQRCode() {
+                var qrtext = document.getElementById("qr-text").value;
+
+                qr.set({
+                    foreground: 'black',
+                    size: 200,
+                    value: qrtext
+                });
+            }
+		</script>
     </div>
 
 
