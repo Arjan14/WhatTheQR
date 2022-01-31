@@ -2,105 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Maak je eigen QR!</title>
+    <title>WhatTheQR</title>
     <link rel="stylesheet" href="../static/stylesheets/make.css">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-    <script>
-            function generateQRCode(value) {
-                let formData = new FormData();
-                formData.append('data', value);
-                fetch('http://localhost:5000/generate_qrcode', {
-                    method: 'POST',
-                    body: formData
-                }).then((res) => {
-                    res.body.getReader().read().then((img) => {
-                        let imageByteArray = img.value;
-                        let stringValue = String.fromCharCode(...imageByteArray);
-                        let encodedValue = btoa(stringValue);
-                        document.getElementById('qrcode').src = `data:image/png;base64,${encodedValue}`;
-                    })
-                })
-            }
-        </script>
 </head>
 <body>
-    <!--Static nav bar-->
-    <div class="Navbar">
-        <ul>
-            <li><a href="/"><img src="../static/images/navlogo.png" alt="Navbar logo" width="55px" lenght="55px"></a></li>
-            <div class="vl"></div>
-            <li><a href="https://github.com/Arjan14"><img src="../static/images/github.png" alt="GitHub logo" width="32px" lenght="32px"></a></li>
-            <li><a href="https://www.linkedin.com/in/arjan-bakema-826267193/"><img src="../static/images/linkedin.png" alt="LinkedIn logo" width="32px" lenght="32px"></a></li>
-        </ul>
+
+<!--Static nav bar-->
+<div class="Navbar">
+    <ul>
+        <li>
+            <a href="/">
+                <img src="../static/images/navlogo.png" alt="Navbar logo" width="55px" lenght="55px">
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/Arjan14">
+                <img src="../static/images/github.png" alt="GitHub logo" width="32px" lenght="32px">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/arjan-bakema-826267193/">
+                <img src="../static/images/linkedin.png" alt="LinkedIn logo" width="32px" lenght="32px">
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!--Logo inc text-->
+<div class="logotext">
+    <img src="../static/images/maakQR.png">
+</div>
+
+<!--Text under logo-->
+<div class="mainBlock">
+    <h3>
+        Nu je een klein beetje te weten bent gekomen over QR-codes is het tijd om een eigen QR-code te maken! In het
+        input veld kan je van alles neerzetten om er vervolgens een QR-code van te kunnen laten genereren. Leuke ideeën
+        waar je een QR-code van kunt maken: LinkedIn profiel, telefoonnummer, of een leuk YouTube filmpje.<br><br>Als je
+        iets hebt gevonden om een QR-code van te kunnen generen kan je hem vervolgens ook downloaden via
+        rechtermuisklik!
+    </h3>
+</div>
+
+<!--Left qr code image-->
+<div class="left">
+    <img src="../static/images/left.png">
+</div>
+
+<!--Generate qr code block-->
+<div class="middle">
+    <div class="inputtext">
+        <input id="qr-text" type="text" placeholder="www.WhatTheQR.nl"/>
     </div>
-
-    <!--Create QR code-->
-    <div class="create">
-
+    <div class="buttonBlock">
+        <button class="qr-btn" onclick="generateQRCode()">Genereer QR code</button>
     </div>
+    <br/>
+    <canvas id="qr-code"></canvas>
+    <!--Script that is needed to generate qr code written in JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script>
+        var qr;
+        (function () {
+            qr = new QRious({
+                element: document.getElementById('qr-code'),
+                size: 200,
+                value: 'https://whattheqr.nl'
+            });
+        })();
 
-    <!--Logo inc text-->
-    <div class="logotext">
-        <img src="../static/images/maakQR.png">
-    </div>
+        function generateQRCode() {
+            var qrtext = document.getElementById("qr-text").value;
 
-    <!--Text under logo-->
-    <div class="mainBlock">
-        <h3>Nu je een klein beetje te weten bent gekomen over QR-codes is het tijd om een eigen QR-code te maken! In het input veld kan je van alles neerzetten om er vervolgens een QR-code van te kunnen laten genereren. Leuke ideeën waar je een QR-code van kunt maken: LinkedIn profiel, telefoonnummer, of een leuk YouTube filmpje.<br><br>Als je iets hebt gevonden om een QR-code van te kunnen generen kan je hem vervolgens ook downloaden via rechtermuisklik!</h3>
-    </div>
+            qr.set({
+                foreground: 'black',
+                size: 200,
+                value: qrtext
+            });
+        }
+    </script>
+</div>
 
+<!--Right qr code image-->
+<div class="right">
+    <img src="../static/images/right.png">
+</div>
 
-    <div class="left">
-        <img src="../static/images/left.png">
-    </div>
-
-    <div class="middle">
-        <div class="inputtext"><input id="qr-text" type="text" placeholder="www.WhatTheQR.nl"/></div>
-        <div class="buttonBlock">
-            <button class="qr-btn" onclick="generateQRCode()">Genereer QR code</button>
-        </div>
-        <br/>
-
-        <canvas id="qr-code"></canvas>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
-		<script>
-			var qr;
-			(function() {
-                    qr = new QRious({
-                    element: document.getElementById('qr-code'),
-                    size: 200,
-                    value: 'https://whattheqr.nl'
-                });
-            })();
-
-            function generateQRCode() {
-                var qrtext = document.getElementById("qr-text").value;
-
-                qr.set({
-                    foreground: 'black',
-                    size: 200,
-                    value: qrtext
-                });
-            }
-		</script>
-    </div>
-
-
-    <div class="right">
-        <img src="../static/images/right.png">
-    </div>
-
-
-    <!--Footer with image and text-->
-    <footer>
-        <hr>
-        <img src="../static/images/logoSmall2.png" alt="Logo" width="9%">
-        <h3>What The QR is mogelijk gemaakt door Arjan Bakema</h3>
-
-    </footer>
+<!--Footer with image and text-->
+<footer>
+    <hr>
+    <img src="../static/images/logoSmall2.png" alt="Logo" width="9%">
+    <h3>What The QR is mogelijk gemaakt door Arjan Bakema</h3>
+</footer>
 
 </body>
 </html>

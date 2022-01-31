@@ -13,8 +13,8 @@ app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
 app.config['UPLOAD_PATH'] = 'uploads'
 
 def validate_image(stream):
-    header = stream.read(512)  # 512 bytes should be enough for a header check
-    stream.seek(0)  # reset stream pointer
+    header = stream.read(512)
+    stream.seek(0)
     format = imghdr.what(None, header)
     if not format:
         return None

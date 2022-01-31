@@ -2,54 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Maak je eigen QR!</title>
+    <title>WhatTheQR</title>
     <link rel="stylesheet" href="../static/stylesheets/upload.css">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--Static nav bar-->
-    <div class="Navbar">
-        <ul>
-            <li><a href="/"><img src="../static/images/navlogo.png" alt="Navbar logo" width="55px" lenght="55px"></a></li>
-            <div class="vl"></div>
-            <li><a href="https://github.com/Arjan14"><img src="../static/images/github.png" alt="GitHub logo" width="32px" lenght="32px"></a></li>
-            <li><a href="https://www.linkedin.com/in/arjan-bakema-826267193/"><img src="../static/images/linkedin.png" alt="LinkedIn logo" width="32px" lenght="32px"></a></li>
-        </ul>
-    </div>
 
-    <!--Logo inc text-->
-    <div class="logotext">
-        <img src="../static/images/uploadQR.png">
-    </div>
-    <div class="mainBlock">
-            <h3>Op deze pagina heb je de mogelijkheid om een QR-code te uploaden. Kom je een QR-code tegen op een opmerkelijke plek, deel die dan met ons! Als je goed kijkt kom je een QR-code dagelijks heel vaak tegen, een QR-code wordt tegenwoordig erg vaak gebruikt, en is bijna niet meer weg te denken.</h3>
-    </div>
+<!--Static nav bar-->
+<div class="Navbar">
+    <ul>
+        <li>
+            <a href="/">
+                <img src="../static/images/navlogo.png" alt="Navbar logo" width="55px" lenght="55px">
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/Arjan14">
+                <img src="../static/images/github.png" alt="GitHub logo" width="32px" lenght="32px">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/arjan-bakema-826267193/">
+                <img src="../static/images/linkedin.png" alt="LinkedIn logo" width="32px" lenght="32px">
+            </a>
+        </li>
+    </ul>
+</div>
 
-    <!--Upload image-->
-    <div class="uploadform">
-        <form method="POST" action="" enctype="multipart/form-data">
-            <p>
-              <input class="bestandknop" type="file" name="file">
-              <input class="uploadknop" type="submit" value="Upload">
-            </p>
-        </form>
-    </div>
+<!--Logo inc text-->
+<div class="logotext">
+    <img src="../static/images/uploadQR.png">
+</div>
 
+<!--Text under logo about uploading photo-->
+<div class="mainBlock">
+    <h3>
+        Op deze pagina heb je de mogelijkheid om een QR-code te uploaden. Kom je een QR-code tegen op een opmerkelijke
+        plek, deel die dan met ons! Als je goed kijkt kom je een QR-code dagelijks heel vaak tegen, een QR-code wordt
+        tegenwoordig erg vaak gebruikt, en is bijna niet meer weg te denken.
+    </h3>
+</div>
 
+<!--Upload image-->
+<div class="uploadform">
+    <form method="POST" action="" enctype="multipart/form-data">
+        <p>
+            <input class="bestandknop" type="file" name="file">
+            <input class="uploadknop" type="submit" value="Upload">
+        </p>
+    </form>
+</div>
 
-    {% for file in files %}
-        <img class="uploadimg" src="{{ url_for('upload', filename=file) }}" >
-        <hr class="hrimage">
-    {% endfor %}
+<!--For loop for showing all images in folder documents-->
+{% for file in files %}
+    <img class="uploadimg" src="{{ url_for('upload', filename=file) }}">
+    <hr class="hrimage">
+{% endfor %}
 
-    <!--Footer with image and text-->
-    <footer class="footerDiv">
-        <hr>
-        <img src="../static/images/logoSmall2.png" alt="Logo" width="9%">
-        <h3>What The QR is mogelijk gemaakt door Arjan Bakema</h3>
-    </footer>
+<!--Footer with image and text-->
+<footer class="footerDiv">
+    <hr>
+    <img src="../static/images/logoSmall2.png" alt="Logo" width="9%">
+    <h3>What The QR is mogelijk gemaakt door Arjan Bakema</h3>
+</footer>
 
 </body>
 </html>
