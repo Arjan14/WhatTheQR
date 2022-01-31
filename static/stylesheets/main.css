@@ -225,6 +225,7 @@ footer{
     width: 100%;
 }
 
+/*Styling of footer hr*/
 footer hr{
     border:none;
   border-top:3px dashed white;

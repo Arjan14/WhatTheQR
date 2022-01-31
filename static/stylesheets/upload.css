@@ -6,6 +6,7 @@ body {
 
 }
 
+/*Styling navbar*/
 .navbar {
     width: 100%;
 }
@@ -67,6 +68,7 @@ footer{
     width: 100%;
 }
 
+/*Styling of footer hr*/
 footer hr{
     border:none;
   border-top:3px dashed white;
@@ -124,6 +126,7 @@ footer h3 {
 
 }
 
+/*Styling of hr*/
 hr  {
     width: 40%;
     border: 0;
@@ -132,12 +135,14 @@ hr  {
     margin-bottom: 30px;
 }
 
+/*Styling of uploadform*/
 .uploadform {
     margin: auto;
   width:50%;
   padding: 10px;
 }
 
+/*Styling of uploadform*/
 form {
   margin: auto;
   width: 50%;
@@ -146,6 +151,7 @@ form {
 
 }
 
+/*Styling of uploadknop*/
 .uploadknop {
     margin-top: 10px;
     font-size: 20px;
@@ -154,6 +160,7 @@ form {
 
 }
 
+/*Styling of bestandknop*/
 .bestandknop {
     margin-top: 10px;
 

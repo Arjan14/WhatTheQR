@@ -225,6 +225,7 @@ footer{
     width: 100%;
 }
 
+/*Styling of footer hr*/
 footer hr{
     border:none;
   border-top:3px dashed white;
@@ -248,6 +249,7 @@ footer h3 {
     padding-bottom: 2%;
 }
 
+/*Styling of first image in text*/
 .image1 {
     float: right;
     margin: 30px;
@@ -257,6 +259,7 @@ footer h3 {
 
 }
 
+/*Styling of second image in text*/
 .image2 {
    float: right;
     margin: 30px;
@@ -266,6 +269,7 @@ footer h3 {
 
 }
 
+/*Styling of third image in text*/
 .image3 {
     float: right;
     margin: 30px;

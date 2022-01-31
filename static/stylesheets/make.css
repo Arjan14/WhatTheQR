@@ -7,6 +7,7 @@ body {
     position: relative;
 }
 
+/*Styling of navbar*/
 .navbar {
     width: 100%;
     z-index: 10;
@@ -70,6 +71,7 @@ footer{
     float: bottom;
 }
 
+/*Styling of footer hr*/
 footer hr{
     border:none;
   border-top:3px dashed white;
@@ -108,6 +110,7 @@ footer h3 {
     margin-bottom: -50px;
 }
 
+/*Styling input button*/
 .inputtext  {
     margin: auto;
     width: 30%;
@@ -115,11 +118,13 @@ footer h3 {
     padding: 5px;
 }
 
+/*Styling input label*/
 .inputtext label    {
     font-size: 25px;
     font-weight: bold;
 }
 
+/*Styling input input*/
 .inputtext   input   {
     width: 100%;
     padding: 10px 10px;
@@ -129,13 +134,12 @@ footer h3 {
     font-size: 20px;
 }
 
-.inputtext input:focus  {
-}
-
+/*Styling inputtext*/
 .inputtext h2   {
     text-decoration: underline;
 }
 
+/*Styling qrcode*/
 #qr-code {
     padding-left: 0;
     padding-right: 0;
@@ -146,6 +150,7 @@ footer h3 {
     padding-bottom: 200px;
 }
 
+/*Styling buttonblock*/
 .buttonBlock    {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -188,7 +193,7 @@ footer h3 {
     border-radius: 15px;
 }
 
-
+/*Styling of left qr image*/
 .left img    {
     width: 300px;
     float: left;
@@ -199,6 +204,7 @@ footer h3 {
 
 }
 
+/*Styling of right qr image*/
 .right img  {
     width: 300px;
     float: right;
@@ -206,12 +212,14 @@ footer h3 {
     padding-top: 100px;
 }
 
+/*Styling of right qr image*/
 .right  {
     margin-top: -40px;
     float:right;
     width:15%;
 }
 
+/*Styling of left qr image*/
 .left {
         margin-top: -40px;
     float: left;
@@ -221,13 +229,13 @@ footer h3 {
     margin-left: -15px;
 }
 
-
+/*Styling of middle qr generator*/
 .middle {
     float:left;
     width:70%;
 }
 
-
+/*Styling of funny img*/
 .imglol {
     height: 300px;
 }

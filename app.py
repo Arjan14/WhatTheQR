@@ -12,6 +12,7 @@ app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024
 app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
 app.config['UPLOAD_PATH'] = 'uploads'
 
+
 def validate_image(stream):
     header = stream.read(512)
     stream.seek(0)
@@ -20,22 +21,27 @@ def validate_image(stream):
         return None
     return '.' + (format if format != 'jpeg' else 'jpg')
 
+
 @app.route("/")
 def home():
     return render_template("index.html")
+
 
 @app.route("/learn")
 def learn():
     return render_template("learn.html")
 
+
 @app.route("/make")
 def make():
     return render_template("make.html")
+
 
 @app.route("/uploadfile")
 def index():
     files = os.listdir(app.config['UPLOAD_PATH'])
     return render_template("upload.html", files=files)
+
 
 @app.route('/generate_qrcode', methods=['POST'])
 def generate_qrcode():
@@ -48,6 +54,7 @@ def generate_qrcode():
 
     response = send_file(buffer, mimetype='image/png')
     return response
+
 
 @app.route('/uploadfile', methods=['POST'])
 def upload_files():
@@ -65,6 +72,7 @@ def upload_files():
 @app.route('/uploads/<filename>')
 def upload(filename):
     return send_from_directory(app.config['UPLOAD_PATH'], filename)
+
 
 if __name__ == '__main__':
     app.run()
