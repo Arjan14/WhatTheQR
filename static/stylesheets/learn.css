@@ -169,10 +169,10 @@ img {
 
 /*Styling of text in mainblock*/
 .mainBlock h2 {
-    padding-bottom: 2%;
     font-size: 40px;
     font-weight: bolder;
     text-decoration: underline;
+    padding-top: 4%;
 }
 
 /*Styling of button div*/
@@ -246,6 +246,34 @@ footer h3 {
     font-style: italic;
     text-align: center;
     padding-bottom: 2%;
+}
+
+.image1 {
+    float: right;
+    margin: 30px;
+    margin-left: 60px;
+        box-shadow: 18px 23px 21px -1px #898989;
+    margin-top: 170px;
+
+}
+
+.image2 {
+   float: right;
+    margin: 30px;
+    margin-left: 60px;
+        box-shadow: 18px 23px 21px -1px #898989;
+    margin-top: 200px;
+
+}
+
+.image3 {
+    float: right;
+    margin: 30px;
+    margin-left: 60px;
+        box-shadow: 18px 23px 21px -1px #898989;
+        margin-top: -10px;
+
+
 }
 
 
