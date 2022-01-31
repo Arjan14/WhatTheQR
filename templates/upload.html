@@ -28,23 +28,27 @@
     </div>
 
     <!--Upload image-->
-    <div class="upload">
-<form method="POST" action="" enctype="multipart/form-data">
-      <p><input type="file" name="file"></p>
-      <p><input type="submit" value="Submit"></p>
-    </form>
+    <div class="uploadform">
+        <form method="POST" action="" enctype="multipart/form-data">
+            <p>
+              <input class="bestandknop" type="file" name="file">
+              <input class="uploadknop" type="submit" value="Upload">
+            </p>
+        </form>
+    </div>
+
+    <hr>
 
     {% for file in files %}
-      <img class="uploadimg" src="{{ url_for('upload', filename=file) }}" style="width: 64px">
+        <img class="uploadimg" src="{{ url_for('upload', filename=file) }}" >
+        <hr class="hrimage">
     {% endfor %}
-
-    </div>
 
     <!--Footer with image and text-->
     <footer class="footerDiv">
         <hr>
         <img src="../static/images/logoSmall2.png" alt="Logo" width="9%">
-        <h3>What The QR is mede mogelijk gemaakt door Arjan Bakema</h3>
+        <h3>What The QR is mogelijk gemaakt door Arjan Bakema</h3>
     </footer>
 
 </body>

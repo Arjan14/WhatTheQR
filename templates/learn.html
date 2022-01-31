@@ -9,7 +9,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Dit is de learn pagina</h1>
-    <a href="/">terug naar home!</a>
+     <!--Static nav bar-->
+        <div class="Navbar">
+            <ul>
+                <li><a href="/"><img src="../static/images/navlogo.png" alt="Navbar logo" width="55px" lenght="55px"></a></li>
+                <div class="vl"></div>
+                <li><a href="https://github.com/Arjan14"><img src="../static/images/github.png" alt="GitHub logo" width="32px" lenght="32px"></a></li>
+                <li><a href="https://www.linkedin.com/in/arjan-bakema-826267193/"><img src="../static/images/linkedin.png" alt="LinkedIn logo" width="32px" lenght="32px"></a></li>
+            </ul>
+        </div>
+        <!--Logo inc text-->
+
+        <!--Triangle suggesting to scroll down-->
+
+        <!--Image or QR codes including hr rulers-->
+
+        <!--Information block "About" QR codes inc. button-->
+        <div class="mainBlock">
+        </div>
+        <!--Block with buttons that redirect to other pages -->
+        <div class="buttonBlock">
+               <a href={{url_for('index')}}> <button id="button3">← terug</button></a>
+
+        </div>
+        <!--Footer with image and text-->
+        <footer>
+            <hr>
+            <img src="../static/images/logoSmall2.png" alt="Logo" width="9%">
+            <h3>What The QR is mogelijk gemaakt door Arjan Bakema</h3>
+        </footer>
 </body>
 </html>
