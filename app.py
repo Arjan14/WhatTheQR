@@ -6,13 +6,14 @@ from flask_cors import CORS
 import imghdr
 from werkzeug.utils import secure_filename
 
+#startup of app
 app = Flask(__name__)
 CORS(app)
 app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024
 app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
 app.config['UPLOAD_PATH'] = 'uploads'
 
-
+#validation of images
 def validate_image(stream):
     header = stream.read(512)
     stream.seek(0)
@@ -21,28 +22,28 @@ def validate_image(stream):
         return None
     return '.' + (format if format != 'jpeg' else 'jpg')
 
-
+#app route for root page (index)
 @app.route("/")
 def home():
     return render_template("index.html")
 
-
+#app route of learn page
 @app.route("/learn")
 def learn():
     return render_template("learn.html")
 
-
+#app route of make page
 @app.route("/make")
 def make():
     return render_template("make.html")
 
-
+#app route of uploadfile
 @app.route("/uploadfile")
 def index():
     files = os.listdir(app.config['UPLOAD_PATH'])
     return render_template("upload.html", files=files)
 
-
+#app route of generating qr code
 @app.route('/generate_qrcode', methods=['POST'])
 def generate_qrcode():
     buffer = BytesIO()
@@ -55,7 +56,7 @@ def generate_qrcode():
     response = send_file(buffer, mimetype='image/png')
     return response
 
-
+#app route of uploading file
 @app.route('/uploadfile', methods=['POST'])
 def upload_files():
     uploaded_file = request.files['file']
@@ -68,11 +69,11 @@ def upload_files():
         uploaded_file.save(os.path.join(app.config['UPLOAD_PATH'], filename))
     return redirect(url_for('index'))
 
-
+#app route of saving the uploaded files
 @app.route('/uploads/<filename>')
 def upload(filename):
     return send_from_directory(app.config['UPLOAD_PATH'], filename)
 
-
+#flask run
 if __name__ == '__main__':
     app.run()
